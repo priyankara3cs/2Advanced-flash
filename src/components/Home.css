@@ -1,0 +1,375 @@
+.back-i {
+  background-image: url("../images/picture-image_2731338.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.navbar {
+  border-top-left-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 550px;
+  height: 10vh;
+  background-color: #0c2f43;
+  padding: 40px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+  color: white;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: -100px;
+  border-right: 100px solid transparent;
+  border-top: 11.7vh solid #0c2f43;
+}
+
+/* Company name on the left */
+.company-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+/* Navigation items on the right */
+.nav-pages {
+  margin-left: 20%;
+  width: 100%;
+  display: flex;
+  gap: 0px;
+  margin-right: 50px;
+}
+
+.nav-pages li {
+  list-style: none;
+  width: 100px;
+  cursor: pointer;
+  color: white;
+}
+
+.nav-pages li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-pages-t {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-pages-t:hover {
+  text-decoration: none;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 15px;
+  background: linear-gradient(45deg, #28b1be, #1f6391);
+  animation: fillUpB 3s;
+  color: #ffffff;
+}
+
+@keyframes fillUpB {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.text-box {
+  list-style: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+}
+
+.selected-text {
+  background-color: transparent;
+  color: #25d0c2;
+  font-weight: 700;
+  opacity: 1;
+}
+
+/* Ensure the layout is responsive */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav-pages {
+    margin-top: 10px;
+  }
+}
+
+.animated-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.animated-card2 {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 90vh;
+  width: 90%;
+  background: #28b1be;
+  border-radius: 10px;
+  overflow: hidden;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.animated-card2::before {
+  position: absolute;
+  content: "";
+  width: 120%;
+  height: 50%;
+  background: #0c2f43;
+  transform: rotate(22deg);
+  z-index: 0;
+}
+
+.animated-card2.animate::before {
+  animation: animate2 4s linear;
+}
+
+@keyframes animate2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-card2::after {
+  position: absolute;
+  content: "";
+  inset: 4px;
+  background-image: url("../images/picture-image_2731338.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.box-data {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  padding: 3px;
+  width: 100%;
+  border-radius: 10px;
+  color: white;
+  text-align: start;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .animated-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+/* 
+@media screen and (max-width: 480px) {
+  .animated-card2 {
+    height: 300px;
+    width: 200px;
+  }
+} */
+
+.list-page-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.column {
+  box-sizing: border-box;
+}
+
+/* PC Screen: Two-column layout with 10% and 90% */
+.column-30 {
+  flex: 0 0 10%;
+  background-color: #0c2f43ab;
+  height: 75vh;
+}
+
+.column-70 {
+  flex: 0 0 90%;
+  background-color: #0c2f436d;
+}
+
+/* Mobile Screen: Single-column layout, 100% width */
+@media (max-width: 768px) {
+  .list-page-container {
+    flex-wrap: wrap;
+  }
+
+  .column-30 {
+    height: auto;
+  }
+
+  .column-30,
+  .column-70 {
+    flex: 0 0 100%;
+  }
+}
+
+/* .......................... */
+
+.conserve-chart-01-text-box-1-opacity {
+  background-color: transparent;
+  width: 100%;
+  color: #dedef4;
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.conserve-chart-01-text-box-2-opacity {
+  opacity: 0.4;
+  background-color: transparent;
+  width: 100%;
+  color: #dedef4;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.conserve-chart-01-text-box-3-opacity {
+  opacity: 0.4;
+  background-color: transparent;
+  width: 100%;
+  color: #dedef4;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.conserve-chart-01-text-box-4-opacity {
+  opacity: 0.4;
+  background-color: transparent;
+  width: 100%;
+  color: #dedef4;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.conserve-chart-01-text-box-5-opacity {
+  opacity: 0.4;
+  background-color: transparent;
+  width: 100%;
+  color: #dedef4;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.selected-text {
+  opacity: 1;
+}
+
+.foo {
+  animation: MotionScale 1.3s;
+  height: auto;
+  width: auto;
+}
+
+@keyframes MotionScale {
+  from {
+    transform: matrix3d(
+      0.5930813638828653,
+      -0.0012963075175383022,
+      0,
+      0.000005226497624311837,
+      0.01655611986520036,
+      0.8612964312738794,
+      0,
+      0.000036955678579156266,
+      0,
+      0,
+      1,
+      0,
+      145,
+      51,
+      0,
+      1
+    );
+    transform-origin: 0px 0px 0px;
+    width: 40%;
+    height: 40%;
+  }
+  50% {
+    transform: matrix3d(
+      0.5070346953451985,
+      -0.04142038603075953,
+      0,
+      -0.00026327533476106803,
+      0.12119124287791651,
+      0.9704898401576015,
+      0,
+      0.0003948762072134976,
+      0,
+      0,
+      1,
+      0,
+      139,
+      59,
+      0,
+      1
+    );
+    transform-origin: 0px 0px 0px;
+    width: 80%;
+    height: 80%;
+  }
+  100% {
+    transform: none;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.scrollable-container {
+  max-height: 470px; /* Set a max height for the scrollable area */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #28b1be #1f6391;
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+.scrollable-container::-webkit-scrollbar {
+  width: 1px; /* Width of the scrollbar */
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: #28b1be; /* Color of the scrollbar thumb */
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background: #1f6391; /* Color of the scrollbar track */
+}
