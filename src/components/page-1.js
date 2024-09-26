@@ -43,7 +43,7 @@ export default function Page() {
                   onClick={() => handleTabClick("page1")}
                   onKeyDown={(e) => handleKeyDown(e, "page1")}
                 >
-                  Page 2
+                  <center>Inner 1</center>
                 </div>
                 <br />
                 <div
@@ -53,7 +53,7 @@ export default function Page() {
                   onClick={() => handleTabClick("page2")}
                   onKeyDown={(e) => handleKeyDown(e, "page2")}
                 >
-                  Page 3
+                  <center>Inner 2</center>
                 </div>
                 <br />
               </div>
