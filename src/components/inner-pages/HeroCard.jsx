@@ -40,8 +40,8 @@ const HeroCard = () => {
                 {ServiceData.map((data, index) => {
                   return (
                     <div
-                      data-aos="fade-up"
-                      data-aos-delay={data.aosDelay}
+                      // data-aos="fade-up"
+                      // data-aos-delay={data.aosDelay}
                       className="min-h-[180px] flex flex-col justify-center items-center rounded-xl gap-2 bg-sky-900/60 backdrop-blur-sm  text-white text-center text-2xl py-8 px-3 w-full lg:w-[300px] mx-auto"
                     >
                       {data.icon}

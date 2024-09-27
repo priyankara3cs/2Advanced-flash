@@ -36,7 +36,7 @@ export default function Home() {
       <div className="back-i">
         <div>
           <div className="animated-container">
-            <div className="animated-card2 animate" data-aos="fade-up">
+            <div className="animated-card2 animate">
               <div className="box-data">
                 <div className="navbar">
                   <div className="company-name">

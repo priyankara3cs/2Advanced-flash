@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Page1 from "./inner-pages/i-page-1.js";
-import Page2 from "./page-3.js";
+import Page2 from "./inner-pages/TvPlayer.js";
 
 export default function Page() {
   const [selectedTab, setSelectedTab] = useState("page1");

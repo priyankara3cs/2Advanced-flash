@@ -5,7 +5,7 @@ import Satelite from "./Satelite";
 
 export default function IPage1() {
   return (
-    <div style={{ padding: "20px", paddingRight: "0" }}>
+    <div className="fooo" style={{ padding: "20px", paddingRight: "0" }}>
       <div className="scrollable-container">
         <HeroCard />
         <Rapidscat />

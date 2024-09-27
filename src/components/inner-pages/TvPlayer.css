@@ -1,0 +1,108 @@
+.tv-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 67vh;
+  position: relative;
+}
+
+.tv-frame {
+  position: relative;
+  margin-left: -10%;
+  width: 600px;
+  height: 400px;
+  background: #333;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+  transform: perspective(1000px) rotateX(5deg) rotateY(-3deg);
+  overflow: hidden;
+}
+
+.tv-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.tv-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 10px solid #222;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.tv-remote {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2b3335;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+.tv-remote h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.remote-button {
+  background-color: #071a27;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remote-button.active {
+  background-color: #000;
+}
+
+.remote-button:hover {
+  background-color: #444;
+}
+
+.remote-button:focus {
+  outline: none;
+}
+
+.tv-off {
+  margin-top: 50px;
+  margin-left: 50px;
+  color: white;
+  font-size: 24px;
+}
+
