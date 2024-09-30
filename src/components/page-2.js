@@ -1,84 +1,60 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "./page-2.css";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-// Import required modules from 'swiper/modules'
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-
-import slide_image_1 from "../assets/img_1.jpg";
-import slide_image_2 from "../assets/img_2.jpg";
-import slide_image_3 from "../assets/img_3.jpg";
-import slide_image_4 from "../assets/img_4.jpg";
-import slide_image_5 from "../assets/img_5.jpg";
-import slide_image_6 from "../assets/img_6.jpg";
-import slide_image_7 from "../assets/img_7.jpg";
+const Banner = () => {
+  return (
+    <div className="banner">
+      <div className="slider" style={{ "--quantity": 10 }}>
+        <div className="item" style={{ "--position": 1 }}>
+          <img src="/images/img_1.jpg" alt="Dragon 1" />
+        </div>
+        <div className="item" style={{ "--position": 2 }}>
+          <img src="/images/img_2.jpg" alt="Dragon 2" />
+        </div>
+        <div className="item" style={{ "--position": 3 }}>
+          <img src="/images/img_3.jpg" alt="Dragon 3" />
+        </div>
+        <div className="item" style={{ "--position": 4 }}>
+          <img src="/images/img_4.jpg" alt="Dragon 4" />
+        </div>
+        <div className="item" style={{ "--position": 5 }}>
+          <img src="/images/img_5.jpg" alt="Dragon 5" />
+        </div>
+        <div className="item" style={{ "--position": 6 }}>
+          <img src="/images/img_6.jpg" alt="Dragon 6" />
+        </div>
+        <div className="item" style={{ "--position": 7 }}>
+          <img src="/images/img_7.jpg" alt="Dragon 7" />
+        </div>
+        <div className="item" style={{ "--position": 8 }}>
+          <img src="/images/img_8.avif" alt="Dragon 8" />
+        </div>
+        <div className="item" style={{ "--position": 9 }}>
+          <img src="/images/img_9.webp" alt="Dragon 9" />
+        </div>
+        <div className="item" style={{ "--position": 10 }}>
+          <img src="/images/img_10.jpg" alt="Dragon 10" />
+        </div>
+      </div>
+      <div className="content">
+        <h1 data-content="3CS">3CS</h1>
+        <div className="author">
+          <h2>3CS DEV</h2>
+          <p>
+            <b>Web Design</b>
+          </p>
+          <p>Subscribe to the channel</p>
+        </div>
+        <div className="model"></div>
+      </div>
+    </div>
+  );
+};
 
 function App() {
   return (
-    <div className="fooo">
-      <div className="scrollable-container">
-        <div className="container">
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            loop={true}
-            slidesPerView={"auto"}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 100,
-              modifier: 2.5,
-            }}
-            pagination={{ el: ".swiper-pagination", clickable: true }}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-              clickable: true,
-            }}
-            modules={[EffectCoverflow, Pagination, Navigation]}
-            className="swiper_container"
-          >
-            <SwiperSlide>
-              <img src={slide_image_1} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={slide_image_2} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={slide_image_3} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={slide_image_4} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={slide_image_5} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={slide_image_6} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={slide_image_7} alt="slide_image" />
-            </SwiperSlide>
-
-            <div className="slider-controler">
-              <div className="swiper-button-prev slider-arrow">
-                <ion-icon name="arrow-back-outline"></ion-icon>
-              </div>
-              <div className="swiper-button-next slider-arrow">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </div>
-              <div className="swiper-pagination"></div>
-            </div>
-          </Swiper>
-        </div>
-      </div>
+    <div style={{ padding: "10px" }} className="foo">
+      <Banner />
     </div>
   );
 }
