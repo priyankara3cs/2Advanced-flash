@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Gallery from "./components/Home"; // Assuming Gallery is the home component
-import "./App.css"; // Include the CSS for the loader
+import Gallery from "./components/Home";
+import "./App.css";
 import Test from "./components/test";
+import Test2 from "./components/inner-pages/i-page-3";
 import "./index.css";
 
 function App() {
@@ -15,12 +16,12 @@ function App() {
       setProgress((oldProgress) => {
         if (oldProgress >= 100) {
           clearInterval(interval);
-          setIsLoading(false); // Stop loading once 100% is reached
+          setIsLoading(false);
           return 100;
         }
         return oldProgress + 1;
       });
-    }, 30); // Adjust speed of loading (lower value for faster loading)
+    }, 30);
 
     return () => clearInterval(interval);
   }, []);
@@ -41,6 +42,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Gallery />} />
             <Route path="/test" element={<Test />} />
+            <Route path="/test2" element={<Test2 />} />
           </Routes>
         </Router>
       )}
