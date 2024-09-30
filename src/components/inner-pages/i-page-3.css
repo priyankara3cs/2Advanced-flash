@@ -21,7 +21,7 @@ header {
   position: relative;
   z-index: 1;
 }
-.slider {
+.slider-2 {
   background-color: darkslategray;
   background-image: url("../../images/picture-image_2731338.jpg");
   background-size: cover;
@@ -34,7 +34,7 @@ header {
   overflow: hidden;
   margin-top: -70px;
 }
-.slider .list .item {
+.slider-2 .list .item {
   position: absolute;
   inset: 0 0 0 0;
   display: flex;
@@ -42,7 +42,7 @@ header {
   align-items: center;
   transition: 1s;
 }
-.slider .list .item .content {
+.slider-2 .list .item .content {
   position: absolute;
   top: 20%;
   left: 50%;
@@ -59,7 +59,7 @@ header {
   font-family: Poppins;
   text-shadow: 0 0 80px #000;
 }
-.slider .list .item .content h2 {
+.slider-2 .list .item .content h2 {
   font-size: 10em;
   font-family: "Bebas Neue", sans-serif;
   line-height: 0.9em;
@@ -68,14 +68,14 @@ header {
   grid-row-start: 1;
   grid-row-end: 3;
 }
-.slider .list .item .content p:last-child {
+.slider-2 .list .item .content p:last-child {
   display: flex;
   justify-content: start;
   align-items: end;
   padding-bottom: 25px;
 }
 /* item default */
-.slider .list .item .image {
+.slider-2 .list .item .image {
   flex-shrink: 0;
   width: var(--diameter);
   height: var(--diameter);
@@ -90,8 +90,8 @@ header {
   position: relative;
   transition: 1s;
 }
-.slider .list .item .image::before,
-.slider .list .item .image::after {
+.slider-2 .list .item .image::before,
+.slider-2 .list .item .image::after {
   position: absolute;
   width: 70%;
   height: 70%;
@@ -105,7 +105,7 @@ header {
   background-position: center;
   transition: 1s;
 }
-.slider .list .item .image::after {
+.slider-2 .list .item .image::after {
   width: 30%;
   height: 30%;
   background-image: var(--url);
@@ -114,45 +114,45 @@ header {
 }
 
 /* default  */
-.slider .list .item .image {
+.slider-2 .list .item .image {
   filter: blur(30px);
 }
 
-.slider .list .item {
+.slider-2 .list .item {
   pointer-events: none;
   opacity: 0;
 }
 /* item active */
-.slider .list .item.active {
+.slider-2 .list .item.active {
   pointer-events: auto;
   opacity: 1;
 }
-.slider .item.active .image {
+.slider-2 .item.active .image {
   filter: blur(0px);
   transform: rotate(0deg);
 }
-.slider .item.active .image::before,
-.slider .item.active .image::after {
+.slider-2 .item.active .image::before,
+.slider-2 .item.active .image::after {
   transform: translate(-50%, -50%) rotate(0deg);
 }
-.slider .list .item.active .content h2 {
+.slider-2 .list .item.active .content h2 {
   transform: translateY(0);
 }
 
 /* item phía sau */
-.slider .list .item.active ~ .item {
+.slider-2 .list .item.active ~ .item {
   opacity: 0;
 }
-.slider .item.active ~ .item .image {
+.slider-2 .item.active ~ .item .image {
   transform: rotate(60deg);
 }
-.slider .item.active ~ .item .image::before {
+.slider-2 .item.active ~ .item .image::before {
   transform: translate(-50%, -50%) rotate(120deg);
 }
-.slider .item.active ~ .item .image::after {
+.slider-2 .item.active ~ .item .image::after {
   transform: translate(-50%, -50%) rotate(170deg);
 }
-.slider .list .item.active ~ .item .content h2 {
+.slider-2 .list .item.active ~ .item .content h2 {
   transform: translateY(100%);
 }
 /* arrows */
@@ -169,7 +169,7 @@ header {
   all: unset;
   cursor: pointer;
 }
-.slider .list::after {
+.slider-2 .list::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -194,24 +194,24 @@ header {
   pointer-events: none;
 }
 @media all and (max-width: 1024px) {
-  .slider .list .item .content {
+  .slider-2 .list .item .content {
     grid-template-columns: repeat(2, 300px);
   }
-  .slider .list .item .content h2 {
+  .slider-2 .list .item .content h2 {
     font-size: 8em;
   }
 }
 @media all and (max-width: 767px) {
-  .slider .list .item .content {
+  .slider-2 .list .item .content {
     grid-template-columns: 80%;
     justify-content: center;
     gap: 20px;
     top: 70px;
   }
-  .slider .list .item .content h2 {
+  .slider-2 .list .item .content h2 {
     font-size: 4em;
   }
-  .slider .list .item .content p {
+  .slider-2 .list .item .content p {
     font-size: small;
   }
 }

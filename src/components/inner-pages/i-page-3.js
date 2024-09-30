@@ -66,7 +66,7 @@ const Slider = () => {
         </nav>
       </header>
 
-      <section className="slider">
+      <section className="slider-2">
         <div className="list">
           {slides.map((slide, index) => (
             <div

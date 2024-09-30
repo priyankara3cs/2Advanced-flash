@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import Page1 from "./inner-pages/i-page-1.js";
 import Page2 from "./inner-pages/TvPlayer.js";
-import Page3 from "./inner-pages/i-page-3.js";
 
 export default function Page() {
   const [selectedTab, setSelectedTab] = useState("page1");
@@ -23,8 +22,6 @@ export default function Page() {
         return <Page1 />;
       case "page2":
         return <Page2 />;
-      case "page3":
-        return <Page3 />;
       default:
         return null;
     }
@@ -57,16 +54,6 @@ export default function Page() {
                   onKeyDown={(e) => handleKeyDown(e, "page2")}
                 >
                   <center>Inner 2</center>
-                </div>
-                <br />
-                <div
-                  className={`conserve-chart-01-text-box-3-opacity ${
-                    selectedTab === "page3" ? "selected-text" : ""
-                  }`}
-                  onClick={() => handleTabClick("page3")}
-                  onKeyDown={(e) => handleKeyDown(e, "page3")}
-                >
-                  <center>Inner 3</center>
                 </div>
                 <br />
               </div>
