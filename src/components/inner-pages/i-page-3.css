@@ -168,7 +168,15 @@ header {
 .arrows button {
   all: unset;
   cursor: pointer;
+  background-color: #00000056;
+  padding: 10px;
+  border-radius: 50%;
 }
+
+.arrows button:hover {
+  background-color: #023637;
+}
+
 .slider-2 .list::after {
   position: absolute;
   content: "";

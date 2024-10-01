@@ -44,7 +44,9 @@ const Slider = () => {
     <main>
       <header>
         <figure className="logo">
-          <img src="/images/logo.png" alt="Logo" />
+          <a href="/">
+            <img src="/images/logo.png" alt="Logo" />
+          </a>
         </figure>
         <nav>
           <svg
